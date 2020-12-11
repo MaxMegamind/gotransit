@@ -1,0 +1,147 @@
+html, body{
+   text-size-adjust:none;
+   -webkit-text-size-adjust: none;
+   -moz-text-size-adjust: none;
+   -ms-text-size-adjust: none;
+}
+
+.apptittle{
+   font-size:13px;
+   color:deepskyblue;
+   text-align:center;
+   width:73%;
+   float:left;
+}	
+
+.apptittle p{
+   font-size:12px;
+   text-align:center;
+
+}	
+	
+.header-bar{
+	height:46px;
+	background:#004B78; 
+	text-align:center;
+	color:#fff;
+	line-height:46px;
+	font-weight:bold;
+	font-size:20px;
+	text-align:right;
+	width:100%;
+	position: fixed;
+	z-index: 5;
+	box-shadow: 0px 6px 6px 0px #808080;
+}
+
+
+.land{
+max-width: 350px;  
+margin: 25px;
+}
+
+.actform{
+   border-radius:10px;
+   background-color:whitesmoke;
+   color:dimgray;
+   width:100%;
+   max-width:350px;
+   height:35px;
+   border:1px solid deepskyblue;
+   padding-left:10px;
+}
+
+
+.actbtn{
+  color:#fff; 
+  font-size:16px;
+  background-color:#1DA1F2;
+  border:1px solid 1DA1F2;
+  border-radius:25px;
+  padding:8px 40px 8px 40px;
+  font-size:17px
+}
+
+.low_link{
+   color:rgb(130, 130, 248);
+   font-size: 12px;
+}
+.low_flow{
+   color:rgba(89, 93, 95, 0.5);
+   font-size: 12px;  
+}
+
+.page_lable{
+   color:rgba(40, 42, 43, 0.5);
+   font-size: 25px;  
+}
+
+
+.contentbox{
+   padding:30px 20px 0px 20px;
+}
+
+.contentbox div{
+   padding:30px 20px 50px 20px;
+    font-size:16px;
+    color: rgb(90, 94, 95);
+   background:#fff;
+   border: 1px solid #CCCCCC;
+   box-shadow: 0px 4px 8px 0px #000;
+}
+
+.maincontent{
+   font-size:16px;
+   color:#333333;
+}
+
+.styled-table {
+   border-collapse: collapse;
+   margin: 25px 0;
+   font-size: 0.9em;
+   font-family: sans-serif;
+   min-width: 300px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+   background-color: #009879;
+   color: #ffffff;
+   text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+   border-bottom: 1px solid #dddddd;
+   font-size: 10px;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+   border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+   font-weight: bold;
+   color: #009879;
+}
+
+.my_trip{
+   width: 50%;
+   float: left;
+   text-align:left;
+   padding: 0px 0px 0px 20px; 
+   font-size: 12px;
+}
+
+.my_trip span{
+   line-height: 25px;
+}
+/*useful*/
