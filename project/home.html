@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/questionbank.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+<script>
+if (user_status !== "loggedin") {
+    window.location.href ="login.html";
+}
+if (trip_status == "active") {
+    window.location.href ="transit.html";
+}
+
+</script>
+<body>
+	<div class="header-bar">
+
+		<div class="btn-group animated" style="float:left;  padding-left:7px; width:13%;">
+			<span type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="material-icons" aria-hidden="true"
+					style="font-size:33px; padding-top:7px; float:left;">more_vert</i>
+			</span>
+			<ul class="dropdown-menu" style="margin:-34px 0px 0px 5px">
+				<li><a id="insurance" onclick="router(this.id)">Insurance</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a onclick="logout()">Log Out</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a onclick="backButtonCallback()">Exit</a></li>
+			</ul>
+		</div><!-- /btn-group -->
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+		
+		
+		<center> 
+			<br>
+			<br>
+			<span class="page_lable"><b>Current Trip</b></span>
+			<br>
+			<br>
+			<br>
+			<img src="images/transport.png" style="height:70px">
+							   
+			<br>				
+			<br>
+
+			<p style="font-size:14px; color:#808080; padding:15px 35px 8px 35px">Click the button below to start a Trip.</p>
+			<br><br>
+			<span id="submitbtn"><b><span id ="new_trip" class="actbtn" onclick="router(this.id)" style="font-size:17px; border-radius: 5px;">Start a Trip</span></b></span>
+		 
+			 <br>
+			 <br>	
+		 </center>	  
+</body>
+
+</html>

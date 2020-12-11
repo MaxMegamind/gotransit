@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+<script>
+
+if (user_status == "loggedin") {
+    window.location.href ="home.html";
+}
+
+
+</script>
+
+<body>
+	<div class="header-bar">
+
+		<div class="btn-group animated" style="float:left;  padding-left:7px; width:13%;">
+			<span type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="material-icons" aria-hidden="true"
+					style="font-size:33px; padding-top:7px; float:left;"></i>
+			</span>
+		</div><!-- /btn-group -->
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+			 
+		<center>
+			<div class="land">
+			<b><span class="page_lable">Sign up</span></b>
+			<br>
+			<br>
+			<img src="images/user2.png" style="height:70px">
+			<br>				
+			<br>		
+		    <br>		
+			
+				<div id="land">		 
+					<input id="phone"  type="text" class="actform" name="phone" required placeholder="Enter Phone Number"><br><br>
+					<input id="password"  type="password" class="actform" name="password" required placeholder="Enter Password"><br><br>
+					<input id="confirm_password"  type="password" class="actform" name="confirm_password" required placeholder="Confirm Password" onkeyup="password_comfirm(this.value)"><br><br>
+					<br>
+					<span id="submitbtn"><b><span class="actbtn" onclick="submit()">Sign up</span></b></span>
+
+			 <br>
+			 <br>
+			 <br>
+             <hr>
+			 <span class="low_flow"> <b class="low_link"  id="login" onclick="router(this.id)">Already have an account?</b></span>
+			</div>
+		  </div>
+
+	</center>
+	<script>
+		  function submit(){ 
+		  document.getElementById("submitbtn").innerHTML="<span style='font-size:14px; color:gray'> Proccessing...<i class='fa fa-spinner fa-spin' style='font-size:30px; color:#1DA1F2'></i></span>";
+
+		  setTimeout(function(){
+		        var phone = document.getElementById("phone").value;
+		        var password = document.getElementById("password").value;
+				var confirm_password = document.getElementById("confirm_password").value;
+
+				//AJAX HERE 
+                $.ajax(
+					{
+						url: base_url+'signup.php',
+						type: "POST",
+						data: {
+							  phone: phone,
+							  password: password,
+						},
+						dataType:"json",
+						success : function(data){
+							               if(data.state == "loggedin"){
+											localStorage.setItem("user_status", data.state);
+											localStorage.setItem("uniqueID", data.uniqueID);
+											localStorage.setItem("phone", data.phone);
+											window.location.href ="home.html";
+										   }
+										   else{
+											document.getElementById("land").innerHTML = "<span  style='color:orangered; font-size:17px'>"+data.reply+"<br><br><br><span id='submitbtn'><b><span class='actbtn' onclick='reload()'>OK</span></b></span></span>";
+							  
+										   }
+						},
+						error : function(error){console.log(`Error ${error}`)}
+
+					}
+				);
+		
+
+            //   if(actpass == "50478"){
+		    //     localStorage.setItem('app_status', 'active');
+			// 	document.getElementById("land").innerHTML = "<span  style='color:#737373; font-size:13px'><b style='color:green; font-size:16px'>SUCCESS!!!</b> <br/> Activation was successful<br> click OK to proceed.<br><br><span id='submitbtn'><b><span class='actbtn' onclick='reload()'>OK</span></b></span></span>";				 		 
+		    //     }	
+            //   else{
+            //     document.getElementById("land").innerHTML = "<span  style='color:orangered; font-size:13px'>Invalid Activation Code <br/> Please check the code and try again.<br><br><span id='submitbtn'><b><span class='actbtn' onclick='reload()'>OK</span></b></span></span>";				 		 
+		    //     }	
+		   },20);	 
+     }
+	</script>
+</body>
+
+</html>

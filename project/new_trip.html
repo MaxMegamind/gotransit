@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+<script>
+if (user_status !== "loggedin") {
+    window.location.href ="signin.html";
+}
+
+
+</script>
+
+<body>
+	<div class="header-bar">
+		  <div style="float:left;  padding-left:7px; width:13%; padding-top:4px; " onclick="history.go(-1)"> 
+			<i class="material-icons"  aria-hidden="true" style="font-size:30px; padding-top:4px; float:left;">arrow_back</i>        
+		  </div>
+		</div><!-- /btn-group -->
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+			 
+		<center>
+			<div class="land">
+			<b><span class="page_lable">New trip</span></b>
+			<br>
+		
+		    <br>		
+			
+				<div id="land">		 
+					<input id="firstname"  type="text" class="actform" required placeholder="First Name"><br><br>
+					<input id="lastname"  type="text" class="actform" required placeholder="Last Name"><br><br>
+					<input id="phone"  type="text" class="actform"  required placeholder="phone"><br><br>
+					<select id="destination_from"  type="text" class="actform"> 
+						<option disabled selected>Traveling From</option>
+						<option value="Abia">Abia</option>
+						<option value="Adamawa">Adamawa</option>
+						<option value="Akwa Ibom">Akwa Ibom</option>
+						<option value="Anambra">Anambra</option>
+						<option value="Bauchi">Bauchi</option>
+						<option value="Bayelsa">Bayelsa</option>
+						<option value="Benue">Benue</option>
+						<option value="Borno">Borno</option>
+						<option value="Cross Rive">Cross River</option>
+						<option value="Delta">Delta</option>
+						<option value="Ebonyi">Ebonyi</option>
+						<option value="Edo">Edo</option>
+						<option value="Ekiti">Ekiti</option>
+						<option value="Enugu">Enugu</option>
+						<option value="FCT">Federal Capital Territory</option>
+						<option value="Gombe">Gombe</option>
+						<option value="Imo">Imo</option>
+						<option value="Jigawa">Jigawa</option>
+						<option value="Kaduna">Kaduna</option>
+						<option value="Kano">Kano</option>
+						<option value="Katsina">Katsina</option>
+						<option value="Kebbi">Kebbi</option>
+						<option value="Kogi">Kogi</option>
+						<option value="Kwara">Kwara</option>
+						<option value="Lagos">Lagos</option>
+						<option value="Nasarawa">Nasarawa</option>
+						<option value="Niger">Niger</option>
+						<option value="Ogun">Ogun</option>
+						<option value="Ondo">Ondo</option>
+						<option value="Osun">Osun</option>
+						<option value="Oyo">Oyo</option>
+						<option value="Plateau">Plateau</option>
+						<option value="Rivers">Rivers</option>
+						<option value="Sokoto">Sokoto</option>
+						<option value="Taraba">Taraba</option>
+						<option value="Yobe">Yobe</option>
+						<option value="Zamfara">Zamfara</option>
+					</select><br><br>
+					<select id="destination_to" class="actform"> 
+						<option disabled selected>Traveling To</option>
+						<option value="Abia">Abia</option>
+						<option value="Adamawa">Adamawa</option>
+						<option value="Akwa Ibom">Akwa Ibom</option>
+						<option value="Anambra">Anambra</option>
+						<option value="Bauchi">Bauchi</option>
+						<option value="Bayelsa">Bayelsa</option>
+						<option value="Benue">Benue</option>
+						<option value="Borno">Borno</option>
+						<option value="Cross Rive">Cross River</option>
+						<option value="Delta">Delta</option>
+						<option value="Ebonyi">Ebonyi</option>
+						<option value="Edo">Edo</option>
+						<option value="Ekiti">Ekiti</option>
+						<option value="Enugu">Enugu</option>
+						<option value="FCT">Federal Capital Territory</option>
+						<option value="Gombe">Gombe</option>
+						<option value="Imo">Imo</option>
+						<option value="Jigawa">Jigawa</option>
+						<option value="Kaduna">Kaduna</option>
+						<option value="Kano">Kano</option>
+						<option value="Katsina">Katsina</option>
+						<option value="Kebbi">Kebbi</option>
+						<option value="Kogi">Kogi</option>
+						<option value="Kwara">Kwara</option>
+						<option value="Lagos">Lagos</option>
+						<option value="Nasarawa">Nasarawa</option>
+						<option value="Niger">Niger</option>
+						<option value="Ogun">Ogun</option>
+						<option value="Ondo">Ondo</option>
+						<option value="Osun">Osun</option>
+						<option value="Oyo">Oyo</option>
+						<option value="Plateau">Plateau</option>
+						<option value="Rivers">Rivers</option>
+						<option value="Sokoto">Sokoto</option>
+						<option value="Taraba">Taraba</option>
+						<option value="Yobe">Yobe</option>
+						<option value="Zamfara">Zamfara</option>
+					</select><br><br>
+					<input id="fname_nok"  type="text" class="actform" name="phone" required placeholder="Full Name Of Next Of Kin"><br><br>
+					<input id="phone_nok"  type="text" class="actform" name="phone" required placeholder="Phone Number Of Next Of Kin"><br><br>
+					<input id="vplate"  type="text" class="actform" name="phone" required placeholder="Vehicle Plate Number"><br><br>
+		            <span id="submitbtn"><b><span class="actbtn" onclick="submit()">Continue</span></b></span>
+
+			 <br>
+			 <br>
+			 <br>
+             <hr>
+			</div>
+		  </div>
+
+	</center>
+	<script>
+		  function submit(){ 
+		  document.getElementById("submitbtn").innerHTML="<span style='font-size:14px; color:gray'> Proccessing...<i class='fa fa-spinner fa-spin' style='font-size:30px; color:#1DA1F2'></i></span>";
+
+		  setTimeout(function(){
+		        var firstname = document.getElementById("firstname").value;
+		        var lastname = document.getElementById("lastname").value;
+		        var phone = document.getElementById("phone").value;
+				var destination_from = document.getElementById("destination_from").value;
+				var destination_to = document.getElementById("destination_to").value;
+				var fname_nok = document.getElementById("fname_nok").value;
+				var phone_nok = document.getElementById("phone_nok").value;
+				var vplate = document.getElementById("vplate").value;
+				//AJAX HERE 
+                $.ajax(
+					{
+						url: base_url+'newtrip.php',
+						type: "POST",
+						data: {
+							firstname: firstname,
+							lastname: lastname,
+							phone: phone,
+							destination_from: destination_from,
+							destination_to: destination_to,
+							fname_nok: fname_nok,
+							phone_nok: phone_nok,
+							vplate: vplate,
+							uniqueID: localStorage.getItem("uniqueID"),
+						},
+						dataType:"json",
+						success : function(data){
+							               if(data.reply == "done"){
+										     localStorage.setItem("trip_status", "active");
+											 window.location.href ="transit.html";
+										   }
+										   else{
+											console.log(data.reply)
+										   }
+						},
+						error : function(error){console.log(`Error ${error}`)}
+
+					}
+				);	
+		   },10);	 
+     }
+	</script>
+</body>
+
+</html>

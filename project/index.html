@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>UI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset utf="8">
+        <!--font-awesome-css-->
+           <link rel="stylesheet" href="css/font-awesome.min.css"> 
+		   <link rel="stylesheet" href="css/material-icons.css"> 
+		<!--bootstrap-->
+			<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!--custom css-->
+			<link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <!--component-css-->
+            
+		<!--default-js-->
+			<script src="js/jquery-2.1.4.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+			<!--script  acess code-->
+			<script>
+				var user_status = localStorage.getItem("user_status");
+				if (user_status == "loggedin") {
+					window.location ="home.html";
+				}
+				else {
+					window.location = "login.html";
+				}
+			</script>
+</script>	
+    </head>
+    <body>
+
+</body>
+</html>

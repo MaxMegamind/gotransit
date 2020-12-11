@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/questionbank.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+<script>
+
+if (user_status !== "loggedin") {
+    window.location.href ="login.html";
+}
+
+</script>
+
+<style></style>
+<body>
+	<div class="header-bar">
+
+		<div class="btn-group animated" style="float:left;  padding-left:7px; width:13%;">
+			<div style="float:left;  padding-left:7px; width:13%; padding-top:4px; " onclick="history.go(-1)"> 
+				<i class="material-icons"  aria-hidden="true" style="font-size:30px; padding-top:4px; float:left;">arrow_back</i>        
+			  </div>
+		</div><!-- /btn-group -->
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<center> 
+			<b><span class="page_lable" style="font-size: 20px;">Manifest List</span></b>
+			<br>
+			<span id="table">
+				<span style='font-size:14px; color:gray'><br><br><br> Proccessing...<i class='fa fa-spinner fa-spin' style='font-size:30px; color:#1DA1F2'></i></span>
+			</span>
+			</div>		
+		 </center>	 
+		 <script>
+	    $("#table").load( base_url+'manifest.php', {
+			uniqueID :localStorage.getItem('uniqueID')
+		}); 
+		 </script>
+</body>
+
+</html>

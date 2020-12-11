@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/questionbank.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+
+<body>
+	<div class="header-bar">
+		<div style="float:left;  padding-left:7px; width:13%; padding-top:4px; " onclick="history.go(-1)"> 
+			<i class="material-icons"  aria-hidden="true" style="font-size:30px; padding-top:4px; float:left;">arrow_back</i>        
+		  </div>
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+		
+		
+		
+		<center> 
+			<div style="max-width:350px">
+				<br><br>
+				<b><span class="page_lable">My Details</span></b>
+				<br>
+				<div class='contentbox' id="box">
+					<span style='font-size:14px; color:gray'><br><br><br> Proccessing...<i class='fa fa-spinner fa-spin' style='font-size:30px; color:#1DA1F2'></i></span>
+				</div>
+				<br><br>
+
+				</div>	
+			</div>		
+		 </center>	 
+		 <script>
+		     $("#box").load( base_url+'my_trip.php', {
+			phone :localStorage.getItem('phone')
+		     }); 
+		 </script>
+</body>
+
+</html>

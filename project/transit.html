@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>go-Transit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset utf="8">
+	<!--font-awesome-css-->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/material-icons.css">
+	<!--bootstrap-->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--custom css-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--component-css-->
+
+	<!--default-js-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/questionbank.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<!--script  acess code-->
+</head>
+<script>
+
+if (user_status !== "loggedin") {
+    window.location.href ="login.html";
+}
+
+</script>
+<body>
+	<div class="header-bar">
+
+		<div class="btn-group animated" style="float:left;  padding-left:7px; width:13%;">
+			<span type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="material-icons" aria-hidden="true"
+					style="font-size:33px; padding-top:7px; float:left;">more_vert</i>
+			</span>
+
+			<ul class="dropdown-menu" style="margin:-34px 0px 0px 5px">
+				<li><a id="insurance" onclick="router(this.id)">Insurance</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a onclick="logout()">Log Out</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a onclick="backButtonCallback()">Exit</a></li>
+			</ul>
+		</div><!-- /btn-group -->
+		<div class="apptittle">GO-TRANSIT</div>
+	</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		
+		<center> 
+			<div style="max-width:350px">
+			<div class='contentbox' id="my_trip" onclick="router(this.id)">
+				<div>
+					<img src="images/bus3.png"  style="height:40px; float:left; margin:-10px 0px 0px 0px;">
+					<p style="float:left; padding-left:20px"><b>Active Trip</b></p>
+				</div>
+			 </div>
+			<div class='contentbox' id="manifest" onclick="router(this.id)">
+				<div>
+				<img src="images/manifest.png"  style="height:40px; float:left; margin:-10px 0px 0px 0px;">
+				<p style="float:left; padding-left:20px" type="phone"><b>Manifest List</b><a href="tel:09033710557" style="text-decoration:none"> </a></p> 
+				</div>
+			 </div>
+			<div class='contentbox' id="insurance" onclick="router(this.id)">
+				<div>
+					<img src="images/insurance6.png"  style="height:44px; float:left; margin:-10px 0px 0px 0px;">
+					<p style="float:left; padding:2px 0px 0px 20px;"><b>Insurance</b><a href="mailto:scholmasterguide@gmail.com" style="text-decoration:none; font-size:11px; overflow: hidden;"></a> </p>
+				</div>
+			 </div>		
+			</div>		
+		 </center>	 
+</body>
+
+</html>
